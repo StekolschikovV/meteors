@@ -1,0 +1,22 @@
+<template name="goodnessList">
+    {{>nav}}
+
+
+    <div class="container">
+        <div class="row">
+            {{#each list}}
+                <div class="col s6 m6">
+                    <div class="card ">
+                        <div class="card-content white-text red">
+                            <span class="card-title">{{title}}</span>
+                        </div>
+                        <div class="card-action">
+                            <a href="/statistic">Статистика {{count}}</a>
+                            <a href="#" class="js-min">Нарушил</a>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</template>

@@ -1,0 +1,12 @@
+<template name="nav">
+    <nav class="blue">
+        <div class="nav-wrapper center-align">
+            <a href="" class="brand-logo">{{title}}</a>
+            {{#if isBackVisible}}
+            <ul id="nav-mobile" class="left">
+                <li><a href="/"><i class="large material-icons">chevron_left</i></a></li>
+            </ul>
+            {{/if}}
+        </div>
+    </nav>
+</template>
