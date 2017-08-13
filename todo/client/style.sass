@@ -1,0 +1,63 @@
+$DEF-COL-BLUE: #a3b9fa
+$DEF-COL-BLUE-LIGHT: #d5e0fd
+$DEF-COL-BLUE-DARK: #8a9cd0
+
+
+=BTN-HOVER
+  border: 1px solid $DEF-COL-BLUE-DARK
+  background: $DEF-COL-BLUE-DARK
+  z-index: 0
+
+
+=BTN
+  width: 40px
+  background: $DEF-COL-BLUE
+  color: white
+  border: 1px solid $DEF-COL-BLUE
+  border-radius: 0
+  box-shadow: none
+  transition: 0.2s
+  &:hover
+    +BTN-HOVER
+
+.add-new-task-group
+  margin-bottom: 50px
+  .input-group
+    input
+      background: #d5e0fd
+      border-radius: 0
+      border: 1px solid #a3b9fa
+      transition: 0.2s
+      box-shadow: none
+      color: white
+      font-style: italic
+      &::placeholder
+        color: white
+        font-style: italic
+    .input-group-btn
+      button
+        +BTN
+
+.added-task
+  margin-bottom: 5px
+  .input-group
+    input
+      background: $DEF-COL-BLUE
+      border-radius: 0
+      transition: 0.2s
+      box-shadow: none
+      color: white
+      font-style: italic
+      border: 1px solid $DEF-COL-BLUE
+      &:focus
+        background: $DEF-COL-BLUE-LIGHT
+    .added-task-checkbox
+      +BTN
+    .input-group-btn
+      button
+        +BTN
+      .star
+        +BTN-HOVER
+
+
+

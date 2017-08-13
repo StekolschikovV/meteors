@@ -21,3 +21,7 @@ autopublish@1.0.7             # Publish all data to the clients (for prototyping
 insecure@1.0.7                # Allow all DB writes from clients (for prototyping)
 iron:router
 ground:db
+fourseven:scss
+reywood:bootstrap3-sass
+matb33:bootstrap-full
+fortawesome:fontawesome
