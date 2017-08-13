@@ -1,0 +1,35 @@
+<template name="home">
+    <div class="row">
+        <div class="col-lg-12 add-new-task-group">
+            <div class="input-group">
+                <input type="text" placeholder="выделите название новой задачи" class="form-control add-new-task-input">
+                <span class="input-group-btn">
+                    <button class="btn btn-default add-new-task-btn" type="button">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                </span>
+            </div>
+        </div>
+        {{#each getTasks}}
+            <div class="col-lg-12 added-task">
+                <div class="input-group {{#if star}} star {{/if}}">
+                    <span class="input-group-addon added-task-checkbox">
+                        <input type="checkbox" {{complete}}>
+                    </span>
+                    <input type="text" class="form-control added-task {{#if complete}} complete {{/if}}" value="{{title}}">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default added-task-star-btn {{#if star}} star {{/if}}" type="button">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </button>
+                        <button class="btn btn-default added-task-remove-btn" type="button">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        {{/each}}
+        {{#unless getTasks}}
+            11
+        {{/unless}}
+    </div>
+</template>

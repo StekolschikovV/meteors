@@ -4,12 +4,14 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/franklin/.meteor/local" />
+      <excludeFolder url="file://$MODULE_DIR$/myapp/.meteor/local" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/todo/.meteor/local" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="meteor-packages-auto-import-npm" level="project" />
     <orderEntry type="library" name="meteor-packages-auto-import-browser" level="project" />
+    <orderEntry type="library" name="meteor-packages-auto-import-npm" level="project" />
   </component>
 </module>

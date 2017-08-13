@@ -7,6 +7,7 @@ Router.configure({ layoutTemplate: 'layoutTemplate' });
 Router.route('/', function () { this.render('goodnessList'); });
 Router.route('/add', function () { this.render('addForm'); });
 Router.route('/statistic', function () { this.render('statistic'); });
+Router.route('/statistic/:_id', function () { this.render('statistic'); });
 
 function setHeader(header) {
     Session.set("headerData", header);
