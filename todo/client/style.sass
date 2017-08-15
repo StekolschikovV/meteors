@@ -1,13 +1,50 @@
+*
+  outline: none !important
+
+
 $DEF-COL-BLUE: #a3b9fa
 $DEF-COL-BLUE-LIGHT: #d5e0fd
 $DEF-COL-BLUE-DARK: #8a9cd0
+$DEF-COL-BLUE--SUPER-DARK: #353c4d
+=SPINNER-MIN
+  width: 90px
+  height: 90px
+  position: absolute
+  left: 0
+  top: 0
+  //background: red
+  .left
+    width: 45px
+    height: 90px
+    border-bottom-left-radius: 150px
+    border-top-left-radius: 150px
+    //background: red
+  .right
+    position: absolute
+    width: 45px
+    height: 90px
+    top: 0
+    //background: green
 
+=SPINNER
+  width: 150px
+  height: 150px
+  position: absolute
+  left: 0
+  top: 0
+  .left
+    width: 75px
+    height: 150px
+    border-bottom-left-radius: 150px
+    border-top-left-radius: 150px
+  .right
+    width: 75px
+    height: 150px
 
 =BTN-HOVER
-  border: 1px solid $DEF-COL-BLUE-DARK
-  background: $DEF-COL-BLUE-DARK
+  border: 1px solid $DEF-COL-BLUE--SUPER-DARK
+  background: $DEF-COL-BLUE--SUPER-DARK
   z-index: 0
-
 
 =BTN
   width: 40px
@@ -41,6 +78,8 @@ $DEF-COL-BLUE-DARK: #8a9cd0
 .added-task
   margin-bottom: 5px
   .input-group
+    .complete
+      text-decoration: line-through
     input
       background: $DEF-COL-BLUE
       border-radius: 0
@@ -54,10 +93,135 @@ $DEF-COL-BLUE-DARK: #8a9cd0
     .added-task-checkbox
       +BTN
     .input-group-btn
+      .dop
+        +BTN-HOVER
       button
         +BTN
       .star
         +BTN-HOVER
+  &:first-child
+    display: none
+
+  .dop-block
+    display: none //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    background: $DEF-COL-BLUE--SUPER-DARK
+    width: 100%
+
+    .tomato-block
+      width: 550px
+      height: 250px
+      padding: 10px
+      text-align: center
+      .wrapper-btn
+        margin-top: 25px
+        min-width: 100%
+        display: block
+        button
+          background: $DEF-COL-BLUE
+          border: 0px
+          padding: 5px 10px
+          color: white
+          transition: 0.2s
+          &:hover
+            background: $DEF-COL-BLUE-DARK
+      .wrapper-work
+        width: 150px
+        height: 150px
+        position: relative
+        .work
+          .circle-spinner-white
+            z-index: 6
+            width: 130px
+            height: 130px
+            position: absolute
+            left: 10px
+            top: 10px
+            background: white
+            border-radius: 100%
+            text-align: center
+            color-interpolation: $DEF-COL-BLUE
+            div
+              margin-top: 35px
+              font-size: 30px
+            input
+              width: 15px
+              border: 0
+          .circle-spinner
+            +SPINNER
+            z-index: 4
+            .left
+              background: $DEF-COL-BLUE
+          .circle-spinner-left-def, .circle-spinner-left-def-top, .circle-spinner-right-def
+            +SPINNER
+            z-index: 2
+            .left
+              background: $DEF-COL-BLUE-LIGHT
+          .circle-spinner-right-def
+            z-index: 2
+            transform: rotate(180deg)
+          .circle-spinner-left-def-top
+            z-index: 4
+          .circle-spinner-right-hover
+            display: none
+            +SPINNER
+            z-index: 5
+            transform: rotate(180deg)
+            .left
+              background: $DEF-COL-BLUE
+        .rest
+          margin-left: 157px
+          position: relative
+          display: table-caption
+          margin-top: 31px
+          .circle-spinner-white
+            z-index: 6
+            width: 80px
+            height: 80px
+            position: absolute
+            left: 5px // !!!
+            top: 5px // !!!
+            background: white
+            border-radius: 100%
+            text-align: center
+            div
+              margin-top: 15px
+              font-size: 20px
+            input
+              width: 15px
+              border: 0
+          .circle-spinner
+            +SPINNER-MIN
+            z-index: 4
+            .left
+              background: $DEF-COL-BLUE
+          .circle-spinner-left-def, .circle-spinner-left-def-top, .circle-spinner-right-def
+            +SPINNER-MIN
+            z-index: 2
+            .left
+              background: $DEF-COL-BLUE-LIGHT
+          .circle-spinner-right-def
+            z-index: 2
+            transform: rotate(180deg)
+          .circle-spinner-left-def-top
+            z-index: 4
+          .circle-spinner-right-hover
+            display: none
+            +SPINNER-MIN
+            z-index: 5
+            transform: rotate(180deg)
+            .left
+              background: $DEF-COL-BLUE
+      .wrapper-rest
+        width: 100px
+        height: 100px
+        background: orchid
+
+.dop
+  .dop-block
+    display: block
+
+
+
 
 
 

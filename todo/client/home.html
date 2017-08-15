@@ -11,14 +11,15 @@
             </div>
         </div>
         {{#each getTasks}}
-            <div class="col-lg-12 added-task">
+
+            <div class="col-lg-12 added-task added-task-{{_id}}">
                 <div class="input-group {{#if star}} star {{/if}}">
                     <span class="input-group-addon added-task-checkbox">
                         <input type="checkbox" {{complete}}>
                     </span>
                     <input type="text" class="form-control added-task {{#if complete}} complete {{/if}}" value="{{title}}">
                     <span class="input-group-btn">
-                        <button class="btn btn-default added-task-star-btn {{#if star}} star {{/if}}" type="button">
+                        <button class="btn btn-default added-task-dop-btn" type="button" data-id="{{_id}}">
                             <i class="fa fa-chevron-down" aria-hidden="true"></i>
                         </button>
                         <button class="btn btn-default added-task-star-btn {{#if star}} star {{/if}}" type="button">
@@ -27,7 +28,74 @@
                         <button class="btn btn-default added-task-remove-btn" type="button">
                             <i class="fa fa-times" aria-hidden="true"></i>
                         </button>
+
                     </span>
+                </div>
+                <div class="dop-block">
+                    <div class="tomato-block">
+                        <div class="wrapper-work">
+                            <span class="work">
+                                <div class="circle-spinner-white">
+                                <div>Work</div>
+                                <input type="text" class="work-time-input" value="1">
+                                <span> m</span>
+                            </div>
+                                <div class="circle-spinner">
+                                    <div class="left"></div>
+                                    <div class="right"></div>
+                                </div>
+                                <div class="circle-spinner-left-def-top">
+                                    <div class="left"></div>
+                                    <div class="right"></div>
+                                </div>
+                                <div class="circle-spinner-left-def">
+                                    <div class="left"></div>
+                                    <div class="right"></div>
+                                </div>
+                                <div class="circle-spinner-right-def">
+                                    <div class="left"></div>
+                                    <div class="right"></div>
+                                </div>
+                                <div class="circle-spinner-right-hover">
+                                    <div class="left"></div>
+                                    <div class="right"></div>
+                                </div>
+                            </span>
+                            <span class="rest">
+                                <div class="circle-spinner-white">
+                                    <div>Rest</div>
+                                    <input type="text" class="rest-time-input" value="1">
+                                    <span>m</span>
+                                </div>
+                                <div class="circle-spinner">
+                                    <div class="left"></div>
+                                    <div class="right"></div>
+                                </div>
+                                <div class="circle-spinner-left-def-top">
+                                    <div class="left"></div>
+                                    <div class="right"></div>
+                                </div>
+                                <div class="circle-spinner-left-def">
+                                    <div class="left"></div>
+                                    <div class="right"></div>
+                                </div>
+                                <div class="circle-spinner-right-def">
+                                    <div class="left"></div>
+                                    <div class="right"></div>
+                                </div>
+                                <div class="circle-spinner-right-hover">
+                                    <div class="left"></div>
+                                    <div class="right"></div>
+                                </div>
+                            </span>
+                        </div>
+
+                        <div class="wrapper-btn">
+                            <button class="start-btn" data-id="{{_id}}">Start</button>
+                            <button class="stop-btn">Stop</button>
+                            <button class="paus-btn">Paus</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         {{/each}}
