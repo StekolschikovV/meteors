@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="581bb4c4-3442-46f9-ad0b-a7d950bc4465" name="Default" comment="" />
+    <list default="true" id="581bb4c4-3442-46f9-ad0b-a7d950bc4465" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_browser.xml" afterPath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_browser.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_npm.xml" afterPath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_npm.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo/.meteor/.finished-upgraders" afterPath="$PROJECT_DIR$/todo/.meteor/.finished-upgraders" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo/.meteor/.id" afterPath="$PROJECT_DIR$/todo/.meteor/.id" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo/.meteor/packages" afterPath="$PROJECT_DIR$/todo/.meteor/packages" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo/.meteor/platforms" afterPath="$PROJECT_DIR$/todo/.meteor/platforms" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo/.meteor/release" afterPath="$PROJECT_DIR$/todo/.meteor/release" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo/.meteor/versions" afterPath="$PROJECT_DIR$/todo/.meteor/versions" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo/client/home.html" afterPath="$PROJECT_DIR$/todo/client/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo/client/main.js" afterPath="$PROJECT_DIR$/todo/client/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo/client/style.sass" afterPath="$PROJECT_DIR$/todo/client/style.sass" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo/package.json" afterPath="$PROJECT_DIR$/todo/package.json" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -14,12 +28,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/todo/client/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="135" column="19" lean-forward="false" selection-start-line="135" selection-start-column="19" selection-end-line="135" selection-end-column="19" />
-              <folding />
+            <state relative-caret-position="443">
+              <caret line="129" column="152" lean-forward="false" selection-start-line="129" selection-start-column="152" selection-end-line="129" selection-end-column="152" />
+              <folding>
+                <element signature="e#303#405#0" expanded="false" />
+                <element signature="e#420#808#0" expanded="false" />
+                <element signature="e#829#1202#0" expanded="false" />
+                <element signature="e#1222#1584#0" expanded="false" />
+                <element signature="e#1604#1749#0" expanded="false" />
+                <element signature="e#1772#2216#0" expanded="false" />
+                <element signature="e#1998#2210#0" expanded="false" />
+                <element signature="e#2233#2744#0" expanded="false" />
+                <element signature="e#2759#4341#0" expanded="false" />
+                <element signature="e#4528#5396#0" expanded="false" />
+                <element signature="e#5478#5531#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -27,9 +53,11 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/todo/client/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="21" column="73" lean-forward="false" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="73" />
-              <folding />
+            <state relative-caret-position="323">
+              <caret line="100" column="65" lean-forward="true" selection-start-line="100" selection-start-column="65" selection-end-line="100" selection-end-column="65" />
+              <folding>
+                <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -37,8 +65,18 @@
       <file leaf-file-name="style.sass" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/todo/client/style.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="102" column="17" lean-forward="false" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="17" />
+            <state relative-caret-position="272">
+              <caret line="112" column="24" lean-forward="true" selection-start-line="112" selection-start-column="24" selection-end-line="112" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/todo/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -55,15 +93,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sata</find>
-      <find>added-task</find>
-      <find>complete</find>
-      <find>parent</find>
-      <find>timeNow</find>
-      <find>circle-right-plus</find>
-      <find>paus</find>
-      <find>+SPINNER</find>
-      <find>rigt</find>
       <find>worckTimer</find>
       <find>.circle-spinner-white</find>
       <find>circle-spinner-white</find>
@@ -74,9 +103,26 @@
       <find>dis</find>
       <find>display: n</find>
       <find>!!</find>
-      <find>added-task-dop-btn</find>
       <find>timerHelper.s</find>
       <find>timerHelper.sta</find>
+      <find>123</find>
+      <find>.added-task-dop-btn</find>
+      <find>321</find>
+      <find>openT</find>
+      <find>rotationSpinner</find>
+      <find>timeNow</find>
+      <find>start-btn</find>
+      <find>.dop</find>
+      <find>tikWorkTemp</find>
+      <find>circle-spinner-left-def-top</find>
+      <find>input-group-btn</find>
+      <find>added-task-dop-btn</find>
+      <find>dop-block</find>
+      <find>complete</find>
+      <find>tomato-block</find>
+      <find>test.update(this._id, { $inc: { count:1 } })</find>
+      <find>worked</find>
+      <find>circle-</find>
     </findStrings>
     <replaceStrings>
       <replace>workTimer</replace>
@@ -112,9 +158,10 @@
         <option value="$PROJECT_DIR$/todo/client/style.css" />
         <option value="$PROJECT_DIR$/todo/client/home.jade" />
         <option value="$PROJECT_DIR$/todo/client/main.html" />
-        <option value="$PROJECT_DIR$/todo/client/style.sass" />
         <option value="$PROJECT_DIR$/todo/client/home.html" />
         <option value="$PROJECT_DIR$/todo/client/main.js" />
+        <option value="$PROJECT_DIR$/todo/client/style.sass" />
+        <option value="$PROJECT_DIR$/todo/.gitignore" />
       </list>
     </option>
   </component>
@@ -132,18 +179,17 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/franklin/node_modules" />
-    <handled-path value="$PROJECT_DIR$/myapp/node_modules" />
     <handled-path value="$PROJECT_DIR$/todo/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="793" />
+    <option name="x" value="744" />
+    <option name="y" value="70" />
     <option name="width" value="814" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -156,7 +202,32 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="meteors" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meteors" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meteors" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meteors" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meteors" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meteors" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
@@ -211,11 +282,17 @@
       <workItem from="1502720379482" duration="726000" />
       <workItem from="1502795106521" duration="924000" />
       <workItem from="1502800991176" duration="1582000" />
+      <workItem from="1502873657544" duration="58000" />
+      <workItem from="1502875148826" duration="368000" />
+      <workItem from="1502875991211" duration="7286000" />
+      <workItem from="1502890306423" duration="4324000" />
+      <workItem from="1502953445440" duration="477000" />
+      <workItem from="1502991540054" duration="7225000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75097000" />
+    <option name="totallyTimeSpent" value="94835000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -229,13 +306,13 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.62103176" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32795697" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6692015" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3266129" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21381143" sideWeight="0.50506973" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21381143" sideWeight="0.4949303" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21912351" sideWeight="0.4949303" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -258,52 +335,16 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/todo/client/main.js</url>
-          <line>46</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/todo/client/main.js</url>
-          <line>39</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/todo/client/main.js</url>
-          <line>85</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/todo/client/main.js</url>
-          <line>113</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/todo/client/main.js</url>
-          <line>115</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/todo/client/main.js</url>
-          <line>127</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/todo/client/main.js</url>
-          <line>125</line>
-          <option name="timeStamp" value="10" />
+          <line>128</line>
+          <properties />
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="13" />
+      <option name="time" value="25" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/franklin/client/templates/layoutTemplate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/franklin/client/main.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -522,13 +563,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/todo/client/main.scss" />
     <entry file="file://$PROJECT_DIR$/todo/client/ffff.html" />
-    <entry file="file://$PROJECT_DIR$/todo/client/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/todo/client/main.html" />
     <entry file="file://$PROJECT_DIR$/franklin/client/templates/layoutTemplate.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -536,13 +571,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/todo/server/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/todo/server/main.js" />
     <entry file="file://$PROJECT_DIR$/franklin/client/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-136">
@@ -550,34 +579,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/todo/client/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/demo/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/.meteor/packages/iron_router/1.1.2/web.browser/lib/route_controller_client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="321" column="0" lean-forward="false" selection-start-line="321" selection-start-column="0" selection-end-line="321" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/todo/client/main.html" />
+    <entry file="file://$PROJECT_DIR$/../../demo/index.html" />
+    <entry file="file://$USER_HOME$/AppData/Local/.meteor/packages/iron_router/1.1.2/web.browser/lib/route_controller_client.js" />
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/common.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
@@ -585,26 +590,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/todo/client/style.sass">
+    <entry file="file://$PROJECT_DIR$/todo/client/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="102" column="17" lean-forward="false" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="443">
+          <caret line="129" column="152" lean-forward="false" selection-start-line="129" selection-start-column="152" selection-end-line="129" selection-end-column="152" />
+          <folding>
+            <element signature="e#303#405#0" expanded="false" />
+            <element signature="e#420#808#0" expanded="false" />
+            <element signature="e#829#1202#0" expanded="false" />
+            <element signature="e#1222#1584#0" expanded="false" />
+            <element signature="e#1604#1749#0" expanded="false" />
+            <element signature="e#1772#2216#0" expanded="false" />
+            <element signature="e#1998#2210#0" expanded="false" />
+            <element signature="e#2233#2744#0" expanded="false" />
+            <element signature="e#2759#4341#0" expanded="false" />
+            <element signature="e#4528#5396#0" expanded="false" />
+            <element signature="e#5478#5531#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/todo/client/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="21" column="73" lean-forward="false" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="73" />
+        <state relative-caret-position="323">
+          <caret line="100" column="65" lean-forward="true" selection-start-line="100" selection-start-column="65" selection-end-line="100" selection-end-column="65" />
+          <folding>
+            <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todo/client/style.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="112" column="24" lean-forward="true" selection-start-line="112" selection-start-column="24" selection-end-line="112" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/todo/client/main.js">
+    <entry file="file://$PROJECT_DIR$/todo/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="135" column="19" lean-forward="false" selection-start-line="135" selection-start-column="19" selection-end-line="135" selection-end-column="19" />
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -42,9 +42,9 @@ $DEF-COL-BLUE--SUPER-DARK: #353c4d
     height: 150px
 
 =BTN-HOVER
-  border: 1px solid $DEF-COL-BLUE--SUPER-DARK
-  background: $DEF-COL-BLUE--SUPER-DARK
-  z-index: 0
+  border: 1px solid $DEF-COL-BLUE--SUPER-DARK !important
+  background: $DEF-COL-BLUE--SUPER-DARK !important
+  z-index: 0 !important
 
 =BTN
   width: 40px
@@ -75,6 +75,7 @@ $DEF-COL-BLUE--SUPER-DARK: #353c4d
       button
         +BTN
 
+
 .added-task
   margin-bottom: 5px
   .input-group
@@ -93,23 +94,36 @@ $DEF-COL-BLUE--SUPER-DARK: #353c4d
     .added-task-checkbox
       +BTN
     .input-group-btn
-      .dop
-        +BTN-HOVER
       button
         +BTN
       .star
         +BTN-HOVER
   &:first-child
     display: none
-
   .dop-block
     display: none //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     background: $DEF-COL-BLUE--SUPER-DARK
     width: 100%
-
+    //&:nth-letter(odd), &:nth-letter(even)
+    //  color: red !important
+    //  background: #353c4d !important
+    .note-block
+      width: 456px
+      height: inherit
+      background: yellow
+    .tag-block
+      width: 250px
+      height: inherit
+      background: green
+    .statistik-block
+      width: 175px
+      height: inherit
+      padding: 10px
+      color: white
     .tomato-block
-      width: 550px
-      height: 250px
+      width: 270px
+      min-width: 270px
+      height: 230px
       padding: 10px
       text-align: center
       .wrapper-btn
@@ -147,21 +161,26 @@ $DEF-COL-BLUE--SUPER-DARK: #353c4d
               width: 15px
               border: 0
           .circle-spinner
+            display: flex
             +SPINNER
             z-index: 4
             .left
               background: $DEF-COL-BLUE
           .circle-spinner-left-def, .circle-spinner-left-def-top, .circle-spinner-right-def
+            display: flex
             +SPINNER
             z-index: 2
             .left
               background: $DEF-COL-BLUE-LIGHT
           .circle-spinner-right-def
+            display: flex
             z-index: 2
             transform: rotate(180deg)
           .circle-spinner-left-def-top
+            display: flex
             z-index: 4
           .circle-spinner-right-hover
+            display: flex
             display: none
             +SPINNER
             z-index: 5
@@ -174,6 +193,7 @@ $DEF-COL-BLUE--SUPER-DARK: #353c4d
           display: table-caption
           margin-top: 31px
           .circle-spinner-white
+
             z-index: 6
             width: 80px
             height: 80px
@@ -215,11 +235,11 @@ $DEF-COL-BLUE--SUPER-DARK: #353c4d
         width: 100px
         height: 100px
         background: orchid
-
 .dop
   .dop-block
-    display: block
-
+    display: flex
+  .added-task-dop-btn
+    +BTN-HOVER
 
 
 

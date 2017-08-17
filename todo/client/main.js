@@ -7,133 +7,135 @@ timerHelper = {
     startId: 0,
     startBlock: '',
     timeWork: 0,
+    tikWorkTemp: 0,
+    tikWorkStatus: '',
     timeRest: 0,
+    tikRestTemp: 0,
     start(id){
-        timerHelper.startId = id;
+        console.log('%c start: ' + id,'background:green;color:#fff;padding:2px 10px 2px 5px')
+
+    },
+    getData(){
+        console.log('%c getData','background:green;color:#fff;padding:2px 10px 2px 5px')
+
         timerHelper.startBlock = $('.added-task-' + timerHelper.startId);
         timerHelper.timeWork = $(this.startBlock).find('.work-time-input').val()
         timerHelper.timeRest = $(this.startBlock).find('.rest-time-input').val()
-        console.log(123)
-    }
-}
+        timerHelper.tikWorkTemp = timerHelper.timeWork
+    },
+    clickBtnStart(){
+        console.log('%c clickBtnStart','background:green;color:#fff;padding:2px 10px 2px 5px')
 
-let restTime = {
-    time: 0,
-    el: "",
-    start(time, el){
-        console.log(time, el)
-        this.time = time * 60
-        this.el = el
-        this.tik(this.time)
-    }, tik(time){
-        console.log(time)
-        // $('.rest .circle-spinner').css('transform','rotate(-' + oneG * timeNow + 'deg)')
+        if(timerHelper.tikWorkStatus != 'paus' && timerHelper.tikWorkStatus != 'start'){
+            timerHelper.tikWorkStatus = 'start'
+            timerHelper.getData()
+            timerHelper.startWork()
+        } else
+            timerHelper.tikWorkStatus = 'start'
+    },
+    clickBtnStop(){
+        console.log('%c clickBtnStop','background:green;color:#fff;padding:2px 10px 2px 5px')
 
-        if(workTimer.run == true && workTimer.pauss == false){
-            this.rotationSpinner(time)
-            if(time > -1){
-                setTimeout(function () {
-                    restTime.tik(--time)
-                }, 1000)
-            } else {
-                console.log(111)
-                // this.rotationReset()
-            }
-        } else if(this.pauss == true){
-            setTimeout(function () {
-                restTime.tik(time)
-            }, 1000)
-        }
-    }, rotationSpinner(timeNow) {
-        var oneG = 360/this.time
-        $(this.el).css('transform','rotate(-' + oneG * timeNow + 'deg)')
-        // $('.rest .circle-spinner').css('transform','rotate(-' + oneG * timeNow + 'deg)')
-        if(oneG * timeNow < 180){
-            $('.circle-spinner-right-hover').show()
-            $('.circle-spinner-left-def-top').hide()
-        }
-    }
-}
+        timerHelper.tikWorkStatus = 'stop'
+        $('.added-task-' + timerHelper.startId).find('.rest .circle-spinner-left-def-top').show()
+        $('.added-task-' + timerHelper.startId).find('.rest .circle-spinner').css('transform','rotate(-' + 0 + 'deg)')
+    },
+    clickBtnPaus(){
+        console.log('%c clickBtnPaus','background:green;color:#fff;padding:2px 10px 2px 5px')
 
-let workTimer = {
-    time: 0,
-    run: true,
-    pauss: false,
-    el: '',
-    start: function (e) {
-        if( this.pauss != true){
-            // this.getData(e)
-            // this.getCircle(e)
-            this.run = true
-            this.pauss = false
-            this.tik(timerHelper.timeWork * 60)
+        timerHelper.tikWorkStatus = 'paus'
+    },
+    openAddedTask(id){
+        console.log('%c openAddedTask: ' + id,'background:green;color:#fff;padding:2px 10px 2px 5px')
+
+        if($('.added-task-' + id).hasClass('dop')){
+            $('.added-task-' + id).toggleClass('dop')
         } else {
-            this.pauss = false
+            timerHelper.clickBtnStop()
+            timerHelper.startId = id;
+            timerHelper.getData()
+            $('*').removeClass("dop");
+            $('.added-task-' + id).addClass('dop')
         }
     },
-    paus: function () {
-        this.pauss = true
-    },
-    stop: function () {
-        this.run = false
-        this.rotationReset()
-    },
-    getCircle: function () {
-        this.el = $(event.currentTarget).parent().parent().find('.work .circle-spinner')
-    },
-    getData: function (event) {
-        this.time =  $(event.currentTarget).parent().parent().find('.work .work-time-input').val() * 60
-        this.time =  5 // !!
-    },
-    tik: function (time) {
-        console.log(time)
-        // $('.dop').find('.rest').hide()
-        // console.log("!", $('.dop').find('.rest').hide())
-        // console.log("!", $('.dop').find('.rest').find('.work-time-input').val())
-        // console.log("!", $(this.el).parent().parent().find('.rest').find('.work-time-input').val())
-        // console.log($(this.el).find('.work').hide())
-        // console.log($(this.el).parent().find('.work').hide())
+    startWork(){
+        console.log('%c startWork', 'background:green;color:#fff;padding:2px 10px 2px 5px')
 
-        if(this.run == true && this.pauss == false){
-            this.rotationSpinner(time)
-            if(time > -1){
-                setTimeout(function () {
-                    workTimer.tik(--time)
-                }, 1000)
+        if(timerHelper.timeWork > 0 && timerHelper.timeWork < 99) {
+            this.tikWorkTemp = this.timeWork * 60 // TODO: test data
+            // timerHelper.tikWorkTemp = 2
+            timerHelper.tikWork()
+        } else
+            console.log('%c Привышение максимальных зачений! timerHelper.timeWork: ' + timerHelper.timeWork, 'margin-left: 50px;background:red;color:#fff;padding:2px 50px 2px 50px')
+    },
+    tikWork(){
+        console.log('%c tikWork: ' + this.tikWorkTemp, 'background:green;color:#fff;padding:2px 10px 2px 5px')
+
+        if(this.tikWorkTemp > 0 && timerHelper.tikWorkStatus == 'start'){
+            this.tikWorkTemp = --this.tikWorkTemp
+            let oneG = 360/(this.timeWork * 60)
+            let nowG = oneG * this.tikWorkTemp
+            $('.added-task-' + this.startId).find('.work .circle-spinner').show()
+            $('.added-task-' + this.startId).find('.work .circle-spinner').css('transform','rotate(-' + nowG + 'deg)')
+            if(nowG < 180){
+                $('.added-task-' + this.startId).find('.work .circle-spinner-right-hover').show()
+                $('.added-task-' + this.startId).find('.work .circle-spinner-left-def-top').hide()
             } else {
-                this.rotationReset()
-                restTime.start($('.dop').find('.rest').find('.work-time-input').val(), $('.dop').find('.rest .circle-spinner'))
+                $('.added-task-' + timerHelper.startId).find('.work .circle-spinner-left-def-top').show()
             }
-        } else if(this.pauss == true){
             setTimeout(function () {
-                workTimer.tik(time)
+                timerHelper.tikWork()
             }, 1000)
+        } else if(timerHelper.tikWorkStatus == 'paus'){
+            setTimeout(function () {
+                timerHelper.tikWork()
+            }, 1000)
+        } else {
+            $('.added-task-' + this.startId).find('.work .circle-spinner-right-hover').hide()
+            $('.added-task-' + this.startId).find('.work .circle-spinner').hide()
+            if(this.tikWorkTemp == 0){
+                timerHelper.tikRestTemp = timerHelper.timeRest * 60 // TODO: test data
+                // timerHelper.tikRestTemp = 60
+                timerHelper.tikRest()
+            }
         }
     },
-    rotationReset: function () {
-        // $('.circle-spinner-right-hover').hide()
-        $(timerHelper.startBlock).find('.worck').find('.circle-spinner-right-hover').hide()
-        // $('.circle-spinner-left-def-top').show()
-        $(timerHelper.startBlock).find('.worck').find('.circle-spinner-left-def-top').show()
-        $(this.el).css('transform','rotate(' + 0 + 'deg)')
-    },
-    rotationSpinner: function (timeNow) {
-        var oneG = 360/this.time
-        $(timerHelper.startBlock).find('.work .circle-spinner').css('transform','rotate(-' + oneG * timeNow + 'deg)')
-        // $(this.el).css('transform','rotate(-' + oneG * timeNow + 'deg)')
-        // $('.rest .circle-spinner').css('transform','rotate(-' + oneG * timeNow + 'deg)')
-        if(oneG * timeNow < 180){
-            // $('.circle-spinner-right-hover').show()
-            $(timerHelper.startBlock).find('.worck').find('.circle-spinner-right-hover').show()
-            // $('.circle-spinner-left-def-top').hide()
-            $(timerHelper.startBlock).find('.worck').find('.circle-spinner-left-def-top').hide()
+    tikRest(){
+        console.log('%c tikRest', 'background:green;color:#fff;padding:2px 10px 2px 5px')
+
+        if(timerHelper.tikRestTemp > 0 && timerHelper.tikWorkStatus == 'start'){
+            timerHelper.tikRestTemp = --this.tikRestTemp
+            let oneG = 360/(timerHelper.timeRest * 60)
+            let nowG = oneG * timerHelper.tikRestTemp
+            $('.added-task-' + timerHelper.startId).find('.rest .circle-spinner').show()
+            $('.added-task-' + timerHelper.startId).find('.rest .circle-spinner').css('transform','rotate(-' + nowG + 'deg)')
+            if(nowG < 180){
+                $('.added-task-' + timerHelper.startId).find('.rest .circle-spinner-right-hover').show()
+                $('.added-task-' + timerHelper.startId).find('.rest .circle-spinner-left-def-top').hide()
+            } else {
+                $('.added-task-' + timerHelper.startId).find('.rest .circle-spinner-left-def-top').show()
+            }
+            setTimeout(function () {
+                timerHelper.tikRest()
+            }, 1000)
+        } else if(timerHelper.tikWorkStatus == 'paus'){
+            setTimeout(function () {
+                timerHelper.tikRest()
+            }, 1000)
+        } else {
+            $('.added-task-' + this.startId).find('.rest .circle-spinner-right-hover').hide()
+            $('.added-task-' + this.startId).find('.rest .circle-spinner').hide()
+            timerHelper.tikWorkStatus = 'stop'
+            tasks.update(timerHelper.startId, { $inc: { sessions:1 } })
+            tasks.update(timerHelper.startId, { $set: { worked: parseInt( tasks.findOne(timerHelper.startId).worked ) + parseInt( timerHelper.timeWork) } })
+            tasks.update(timerHelper.startId, { $set: { rested: parseInt( tasks.findOne(timerHelper.startId).rested ) + parseInt( timerHelper.timeRest ) } })
         }
     }
 }
+
 
 Template.home.rendered = function () {
     $('.added-task-dop-btn')[0].click()
-    console.log(321)
 }
 
 Template.home.helpers({
@@ -145,21 +147,28 @@ Template.home.helpers({
 Template.home.events({
     "click .add-new-task-btn": function () {
         let val = $(".add-new-task-input").val()
-        tasks.insert({"title": val, "complete": "", "star": false })
+        tasks.insert({
+            "title": val,
+            "complete": "",
+            "star": false,
+            "date": '' + new Date().getDay() + '.' + new Date().getMonth() + '.' + new Date().getFullYear(),
+            "sessions": 0,
+            "worked": 0,
+            "rested": 0
+        })
         $(".add-new-task-input").val('')
     },
     "click .added-task-remove-btn": function () {
         tasks.remove(this._id)
     },
     "click .start-btn": function (event) {
-        timerHelper.start($(event.currentTarget).data('id'))
-        workTimer.start()
+        timerHelper.clickBtnStart()
     },
     "click .paus-btn": function (e) {
-        workTimer.paus(e)
+        timerHelper.clickBtnPaus()
     },
     "click .stop-btn": function () {
-        workTimer.stop()
+        timerHelper.clickBtnStop()
     },
     "input .added-task": function (event) {
         if($(event.currentTarget).val())
@@ -171,15 +180,7 @@ Template.home.events({
         }
     },
     "click .added-task-dop-btn": function (event) {
-        timerHelper.start($(event.currentTarget).data('id'))
-        // $(event.currentTarget).parent().parent().parent().toggleClass("dop")
-        // $(event.currentTarget).toggleClass("dop")
-        // if($(event.currentTarget).parent().parent().parent().hasClass("dop")){
-        //     $('*').removeClass("dop");
-        //     $(event.currentTarget).parent().parent().parent().addClass("dop")
-        //     $(event.currentTarget).addClass("dop")
-        // }
-        // workTimer.stop()
+        timerHelper.openAddedTask($(event.currentTarget).data('id'))
     },
     "click .added-task-star-btn": function (event) {
         tasks.update(this._id, {$set: { star: isStar(this._id)} })
